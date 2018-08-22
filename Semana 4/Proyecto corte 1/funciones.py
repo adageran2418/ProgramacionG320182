@@ -1,4 +1,9 @@
 def calcular_precio_producto(coste_producto):
+    """
+    vfsdgsdfgfasdg
+    :param coste_producto:
+    :return:
+    """
     pass
 
 
