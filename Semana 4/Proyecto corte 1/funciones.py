@@ -1,7 +1,9 @@
 def calcular_precio_producto(coste_producto):
     """
-
-    (mi edit)
+asdbnjasdn safc
+    wefcwe
+    fwe
+    f(mi edit)
 
     kihjkgjkghjf
     vfsdgsdfgfasdg
