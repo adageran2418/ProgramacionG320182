@@ -235,7 +235,33 @@ def calcular_recaudo_horas_extra(horas_1,
                                  horas_2,
                                  horas_3,
                                  horas_4):
-    pass
+    def calcular_recaudo_horas_extra(horas_1,
+                                 horas_2,
+                                 horas_3,
+                                 horas_4):
+    '''
+
+    (float,float,float,float) - > float
+
+    >>> calcular_recaudo_horas_extra(2,2,2,2)
+    1000000.0
+
+    >>> calcular_recaudo_horas_extra(1,1,1,1)
+    500000.0
+
+    >>> calcular_recaudo_horas_extra(4,4,4,4)
+    2000000.0
+
+    :param horas_1: Horas extra 1
+    :param horas_2: Horas extra 2
+    :param horas_3: Horas extra 3
+    :param horas_4: Horas extra 4
+    :return:valor total de las horas extras solicitadas
+
+    
+
+    '''
+
 
 
 def calcular_recaudo_mixto_local(coste_producto_1,
