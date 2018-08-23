@@ -233,7 +233,7 @@ def calcular_recaudo_locales(coste_producto_1,
     >>> calcular_recaudo_locales (1000, 2000, 3000)
     9000.0
     >>> calcular_recaudo_locales (666, 999, 777)
-    3663
+    3663.0
     :param coste_producto_1: (num) costo del producto 1
     :param coste_producto_2: (num) costo del producto 2
     :param coste_producto_3: (num) costo del producto 3
