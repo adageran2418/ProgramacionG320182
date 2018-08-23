@@ -229,13 +229,43 @@ print("El iva del servicio es: ", iva_servicio)
 def calcular_recaudo_locales(coste_producto_1,
                              coste_producto_2,
                              coste_producto_3):
-    pass
+        '''
+    (float) -> float
+    >>> calcular_recaudo_locales (100, 200, 300)
+    900.0
+
+    >>> calcular_recaudo_locales (1000, 2000, 3000)
+    9000.0
+
+    >>> calcular_recaudo_locales (666, 999, 777)
+    3663
+
+
+    :param coste_producto_1: (num) costo del producto 1
+    :param coste_producto_2: (num) costo del producto 2
+    :param coste_producto_3: (num) costo del producto 3
+    :return: (num) Recaudo costo productos locales
+    '''
+    recaudo_local = calcular_precio_producto(coste_producto_1)+calcular_precio_producto(coste_producto_2)+calcular_precio_producto(coste_producto_3)
+    return recaudo_local
+
+# Llamar la funcion 3 veces
+
+coste_producto_1 = calcular_precio_producto(float(input('digite coste del producto 1 ')))
+
+coste_producto_2 = calcular_precio_producto(float(input('digite coste del producto 2 ')))
+
+coste_producto_3 = calcular_precio_producto(float(input('digite coste del producto 3 ')))
+
+
+# Calcular recaudo coste de productos locales
+recaudo_productos = coste_producto_1 + coste_producto_2 + coste_producto_3
+
+
+#Imprimir el recaudo de los productos
+print ('El recaudo total de los productos es ', recaudo_productos)
 
 def calcular_recaudo_horas_extra(horas_1,
-                                 horas_2,
-                                 horas_3,
-                                 horas_4):
-    def calcular_recaudo_horas_extra(horas_1,
                                  horas_2,
                                  horas_3,
                                  horas_4):
