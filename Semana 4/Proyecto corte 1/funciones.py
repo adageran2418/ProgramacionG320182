@@ -201,15 +201,12 @@ def calcular_iva_servicio_fuera(cantidad_horas, tasa):
     '''
     (float) -> float
     Calcula el iva de un servicio fuera
-
     >>> calcular_iva_servicio_fuera(10,19)
     237500.0
     >>> calcular_iva_servicio_fuera(12,25)
     375000.0
     >>> calcular_iva_servicio_fuera(5,25)
     156250.0
-
-
     :param cantidad_horas: Cantidad de horas del servicio
     :param tasa: Impuesto de la tasa
     :return: valor de la tasa sobre el envio
@@ -233,14 +230,10 @@ def calcular_recaudo_locales(coste_producto_1,
     (float) -> float
     >>> calcular_recaudo_locales (100, 200, 300)
     900.0
-
     >>> calcular_recaudo_locales (1000, 2000, 3000)
     9000.0
-
     >>> calcular_recaudo_locales (666, 999, 777)
     3663
-
-
     :param coste_producto_1: (num) costo del producto 1
     :param coste_producto_2: (num) costo del producto 2
     :param coste_producto_3: (num) costo del producto 3
@@ -270,32 +263,79 @@ def calcular_recaudo_horas_extra(horas_1,
                                  horas_3,
                                  horas_4):
     '''
-
     (float,float,float,float) - > float
-
     >>> calcular_recaudo_horas_extra(2,2,2,2)
     1000000.0
-
     >>> calcular_recaudo_horas_extra(1,1,1,1)
     500000.0
-
     >>> calcular_recaudo_horas_extra(4,4,4,4)
     2000000.0
-
     :param horas_1: Horas extra 1
     :param horas_2: Horas extra 2
     :param horas_3: Horas extra 3
     :param horas_4: Horas extra 4
     :return:valor total de las horas extras solicitadas
 
-    
-
     '''
 
+    recaudo_horas_extra = calcular_precio_servicio(horas_1)+calcular_precio_servicio(horas_2)+calcular_precio_servicio(horas_3)+calcular_precio_servicio(horas_4)
+    return recaudo_horas_extra
 
+# llamar la funcion cuatro veces
+
+horas_1 = calcular_precio_servicio(float(input('Digite la cantidad de horas')))
+
+horas_2 = calcular_precio_servicio(float(input('Digite la cantidad de horas')))
+
+horas_3 = calcular_precio_servicio(float(input('Digite la cantidad de horas')))
+
+horas_4 = calcular_precio_servicio(float(input('Digite la cantidad de horas')))
+
+# Calcular recaudo horas extra
+
+recaudo_horas_extra = horas_1 + horas_2 + horas_3 + horas_4
+
+# Imprimir el recaudo de las horas extra
+
+print ('El recaudo de las horas extra es ', recaudo_horas_extra)
 
 def calcular_recaudo_mixto_local(coste_producto_1,
                                  coste_producto_2,
                                  horas_1,
                                  horas_2):
-    pass
+    '''
+    (float,float,float,float) - > float
+    >>> calcular_recaudo_horas_extra(100,200,2,2)
+    4450.0
+    >>> calcular_recaudo_horas_extra(200,300,1,5)
+    6750.0
+    >>> calcular_recaudo_horas_extra(500,1000,4,3)
+    9251.0
+    :param coste_producto_1: Horas extra 1
+    :param coste_producto_2: Horas extra 2
+    :param horas_1: Horas extra 3
+    :param horas_2: Horas extra 4
+    :return:valor del recaudo mixto
+
+    '''
+    recaudo_mixto_local = calcular_precio_producto(coste_producto_1)+calcular_precio_producto(coste_producto_2)+calcular_precio_servicio(horas_1)+calcular_precio_servicio(horas_2)
+    return recaudo_mixto_local
+
+# Llamar la funcion cuatro veces
+
+coste_producto_1 = calcular_precio_producto(float(input('digite coste del producto 1 ')))
+
+coste_producto_2 = calcular_precio_producto(float(input('digite coste del producto 2 ')))
+
+horas_1 = calcular_precio_servicio(float(input('Digite la cantidad de horas')))
+
+horas_2 = calcular_precio_servicio(float(input('Digite la cantidad de horas')))
+
+# Calcular recaudo mixto
+
+recaudo_mixto_local = coste_producto_1 + coste_producto_2 + horas_1 + horas_2
+
+# Imprimir el recaudo mixto
+print ('El recaudo mixto local es ', recaudo_mixto_local)
+
+
