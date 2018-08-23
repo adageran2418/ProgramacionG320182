@@ -226,7 +226,7 @@ print("El iva del servicio es: ", iva_servicio)
 def calcular_recaudo_locales(coste_producto_1,
                              coste_producto_2,
                              coste_producto_3):
-        '''
+    '''
     (float) -> float
     >>> calcular_recaudo_locales (100, 200, 300)
     900.0
