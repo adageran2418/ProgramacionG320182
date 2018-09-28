@@ -1,10 +1,28 @@
 def calcular_precio_producto(coste_producto):
-    """
-    vfsdgsdfgfasdg
-    :param coste_producto:
-    :return:
-    """
-    pass
+        '''
+    (float) -> float
+    Calcula el precio de un producto sumandole una comision del 50% sobre el costo del producto
+    >>> calcular_precio_producto(100)
+    150.0
+
+    >>> calcular_precio_producto(200)
+    300.0
+
+    >>> calcular_precio_producto(500)
+    750.0
+
+    :param coste_producto: (num) El costo del producto
+    :return: (num) El costo del producto màs el 50%
+    '''
+    precio_producto = coste_producto + (coste_producto/2)
+
+    return precio_producto
+
+    # Llamar la funcion
+precio_producto = calcular_precio_producto (float(input('Digite el coste del producto')))
+
+     #Imprimir coste del producto
+print('El costo del producto es', precio_producto)
 
 
 def calcular_precio_servicio(cantidad_horas):
